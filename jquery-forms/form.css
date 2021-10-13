@@ -1,0 +1,21 @@
+form p label {
+    display: inline-block;
+    width: 15%;
+    min-width: 100px;
+}
+
+input:invalid {
+    border: 2px solid crimson;
+}
+
+.hide {
+    display: none;
+}
+
+.ok {
+    color: green;
+}
+
+.error {
+    color: crimson;
+}

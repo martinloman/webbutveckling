@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+nav {
+  height: 100px;
+  background-color: green;
+}
+
+.outer {
+  margin: 0;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: stretch;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: calc(100vh - 100px);
+}
+
+.inner {
+  margin: 30px;
+  color: black;
+  background-color: white;
+  width: 100%;
+}

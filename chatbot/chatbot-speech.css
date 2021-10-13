@@ -1,0 +1,7 @@
+.my-message span {
+  border-bottom-left-radius: 0;
+}
+
+.bot-message span {
+  border-bottom-right-radius: 0;
+}

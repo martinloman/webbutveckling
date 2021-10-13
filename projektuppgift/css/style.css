@@ -1,0 +1,31 @@
+footer {
+  background-color: blueviolet;
+  height: 10em;
+  color: antiquewhite;
+}
+
+nav img.logo {
+  height: 50px;
+  width: 50px;
+}
+
+nav a.active {
+  border-bottom: 3px solid blueviolet;
+}
+
+nav {
+  align-items: center;
+}
+
+table {
+  width: 100%;
+}
+
+tfoot {
+  font-weight: bold;
+  background-color: aquamarine;
+}
+
+.table-digit {
+  text-align: center;
+}

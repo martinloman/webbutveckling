@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+  var eventEmitter = io();
+  eventEmitter.on("reply", function(data) {
+    $("#output").text("Chattmeddelande: " + data);
+    console.log(data);
+  });
+  chat = function() {
+    eventEmitter = io();
+    var msg = $("#msg").val();
+    eventEmitter.emit("chat", msg);
+  }
+</script>
+
+<body>
+  <input id="msg" type="text">
+  <button onclick="chat();">Chatta</button>
+  <p id="output"></p>
+</body>
+
+</html>

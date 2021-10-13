@@ -1,0 +1,14 @@
+Stöd i HTML
+=============
+required
+minlength="6"
+input type="email"
+
+Stöd varierar mellan webbläsare. 
+Man vill ofta skriva egen validering med mer kontroll.
+
+placeholder="Minst 6 tecken"
+
+email-format
+
+usernameCounter

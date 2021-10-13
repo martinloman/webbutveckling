@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="form.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form id="thisForm">
+        <p>
+            <label for="username">Användarnamn:</label>
+            <input name="username" id="username" type="text" required minlength="6" placeholder="Minst 6 tecken" />
+            <label id="usernameCounter" class="error">0</label>
+        </p>
+        <p>
+            <label for="email">E-post:</label>
+            <input name="email" id="email" type="email" />
+            <br />
+            <label class="error hide" id="emailError"></label>
+        </p>
+        <p>
+            <label for="address">Adress:</label>
+            <input name="address" id="address" type="text" />
+        </p>
+
+        <button type="button" id="btnSend">Skicka</button>
+    </form>
+</body>
+<script>
+    $(document).ready(function() {
+        $("#btnSend").click(function(e) {
+            var email = $("#email").val();
+            var emailError = $("#emailError");
+
+            if (!email || email === "") {
+                emailError.text("E-postadress är obligatoriskt.");
+                emailError.slideDown(1000);
+            } else if (!email.includes("@")) {
+                emailError.text("E-postadressen saknar @-tecken.");
+                emailError.slideDown(1000);
+            }
+        });
+
+        $("#username").keyup(function(e) {
+            var username = $("#username").val();
+            var theCounter = $("#usernameCounter");
+            theCounter.text(username.length);
+
+            // Ge användaren visuell feedback på inmatningen.
+            if (username.length >= 6) {
+                theCounter.removeClass("error");
+                theCounter.addClass("ok");
+            } else {
+                theCounter.removeClass("ok");
+                theCounter.addClass("error");
+            }
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,20 @@
+
+<img src="https://www.gravatar.com/avatar/df2dc89db476f82b895b762e638b6d22?s=35" class="rounded-circle" />
+
+<div class="badge">4</div>
+
+<div class="nav-item dropdown">
+</div>
+
+<div class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle pt-0" href="#" id="navbarDropdownProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img src="https://www.gravatar.com/avatar/df2dc89db476f82b895b762e638b6d22?s=35" class="rounded-circle" />
+    <span class="badge badge-danger badge-pill ml-n3 align-top">4</span>
+  </a>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+    <a class="dropdown-item" href="#">Messages <span class="badge badge-danger badge-pill">4</span></a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Log out</a>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.coordinates {
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-color: #eee;
+    display: flex;
+    /* Vertical center alignment */
+    align-items: center;
+    /* Horizontal center alignment */
+    justify-content: center;
+}

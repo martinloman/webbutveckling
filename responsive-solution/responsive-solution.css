@@ -36,20 +36,22 @@ header {
     font-size: 14px;
   }
   .block {
-    flex: 50%;
+    flex: 50%;  /*makes blocks take up half the with of the container, creating two columns*/
   }
 }
 
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: x-large;
+    font-size: x-large; /* reduces font size */
   }
   .block {
-    flex: 100%;
+    flex: 100%; /* makes blocks full with, essentially creating a column */
     font-size: 12px;
   }
 }
-
+/*
+  Sets the font when printing the page.
+*/
 @media print {
   body {
     font-family: Georgia, 'Times New Roman', Times, serif;

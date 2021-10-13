@@ -14,7 +14,7 @@ header {
 }
 
 .block {
-  width: 33%;
+  flex: 33%;
   height: 10em;
   background-color: cadetblue;
   display: flex;
@@ -24,7 +24,7 @@ header {
 }
 
 .block-container {
-  width: 100%;
+  flex: 100%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -32,17 +32,20 @@ header {
 
 @media screen and (max-width: 900px) {
   /*style goes here*/
-  .body {
+  body {
     font-size: 14px;
   }
   .block {
-    width: 50%;
+    flex: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: x-large;
+  }
   .block {
-    width: 100%;
+    flex: 100%;
     font-size: 12px;
   }
 }

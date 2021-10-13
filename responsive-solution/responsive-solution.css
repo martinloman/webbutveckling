@@ -30,7 +30,7 @@ header {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
   /*style goes here*/
   body {
     font-size: 14px;

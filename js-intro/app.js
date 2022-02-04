@@ -6,7 +6,7 @@
 //Kommentar på en rad
 
 //Tilldelning av ett värde till en variabel
-let x = 10
+const x = 10
 
 // if-else
 if (x == 10) {
@@ -21,7 +21,7 @@ if ("5" == 5) {
 }
 
 if ("5" === 5) { // nej, det är inte strikt lika eftersom datatypen skiljer, en sträng är inte ett heltal.
-  console.log("'5' är strikt f5")
+  console.log("'5' är strikt 5")
 } else {
   console.log("'5' är inte strikt 5")
 }
@@ -33,7 +33,15 @@ console.log("y = " + y)
 y = "något annat"
 console.log("y = " + y)
 
-// arrayer
+//en funktion som tar två tal som inparametrar och returnerar summan av dem.
+function add(tal1, tal2) {
+  return tal1 + tal2
+}
+
+let a = add(2,3)
+console.log(a)
+
+// En array påminner om listor i Python.
 let arr = [1, 2, 3, 4, "hej"]
 
 // olika sätt att loopa igenom en array
@@ -41,15 +49,11 @@ for (let index = 0; index < arr.length; index = index + 1) {
   console.log(arr[index]) //plockar ut värdet på platsen "index" i arrayen
 }
 
-// forEach tar en funktion som argument och applicerar den funktionen på varje element. Funktionen får ett element som inparameter.
+// forEach tar en (anonym) funktion som argument och applicerar den funktionen på varje element. Funktionen får ett element i taget som argument.
 arr.forEach(function(element) {
-  console.log(element)
+  let res = element + 2
+  console.log(res)
 })
-
-//en funktion som tar två tal som inparametrar och returnerar summan av dem.
-function add(tal1, tal2) {
-  return tal1 + tal2
-}
 
 //objekt i javascript
 let obj = {

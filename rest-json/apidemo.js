@@ -1,8 +1,7 @@
-$(function() {
-  $('#search').on('keypress', async(event) => {
-    if (event.key === 'Enter') {
-
-      let searchTerm = "" //skriv kod som hämtar värdet i sökfältet
+$(function () {
+  $("#search").on("keypress", async (event) => {
+    if (event.key === "Enter") {
+      let searchTerm = document.getElementById("search").value //skriv kod som hämtar värdet i sökfältet
 
       // Det här anropar funktionen för att hämta info från ett API
       let results = await search(searchTerm)
@@ -24,14 +23,15 @@ async function search(searchString) {
     Då blir URLen `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=1a08c634ec1bc9d64558c15c3e88cdbf`
     */
 
-  var url = ``
+  var url = `https://api.themoviedb.org/3/search/movie?query=${searchString}&api_key=1a08c634ec1bc9d64558c15c3e88cdbf`
   console.log(url)
   let response = await fetch(url)
 
   //Använd console.log för att skriva ut resultatet till konsollen och titta på det
+  console.log(response)
 
-  let json = await response.json(); // Detta gör om resultatet från APIet till ett JSON-objekt.
-  return json;
+  let json = await response.json() // Detta gör om resultatet från APIet till ett JSON-objekt.
+  return json
 }
 
 /*
@@ -40,7 +40,7 @@ async function search(searchString) {
 */
 function renderResults(res) {
   let list = $("#searchresults") //Hämtar ut diven med id="searchresults" för att lägga in resultatet där
-    //Använd console.log för att se ur objektet res ser ut.
+  //Använd console.log för att se ur objektet res ser ut.
   console.log(res)
 
   let allObjects = [] //hämta ut rätt del av res och tilldela allObjects det värdet.
@@ -48,5 +48,4 @@ function renderResults(res) {
     // lägg in en div i list för varje objekt
     // du kan använda t.ex. list.append("en sträng med html")
   })
-
 }

@@ -1,6 +1,7 @@
 // ------------------------------------------------- Din kod här --------------------------------------------------------------
 
 const API_IMAGE_BASE_PATH = "https://image.tmdb.org/t/p/w154"
+const API_BACKDROP_BASE_PATH = "https://image.tmdb.org/t/p/original"
 let movieSearch = document.getElementById("movieSearch")
 
 movieSearch.onkeydown = async function (event) {
@@ -52,8 +53,12 @@ function renderResults(results) {
   results.forEach((result) => {
     //Skapa en sträng med HTML som innehåller information om filmen.
     let movieCardHtml = `
-    <div class="movie-card">
-      <img src="${API_IMAGE_BASE_PATH + result.poster_path}"/>
+    <div class="movie-card" style="background: rgba(0, 0, 0, 0.7) url(${
+      API_BACKDROP_BASE_PATH + result.backdrop_path
+    }); background-size: cover; background-repeat: no-repeat; background-blend-mode: darken;">
+      <img src="${
+        result.poster_path ? API_IMAGE_BASE_PATH + result.poster_path : ""
+      }"/>
       <div class="movie-text">
         <h3>${result.title}</h3>
         <p>${result.overview}</p>
@@ -65,7 +70,9 @@ function renderResults(results) {
           <span><strong>Vote average:</strong> ${result.vote_average}</span>
           <span><strong>Votes:</strong> ${result.vote_count}</span>
         </p>
-        <p class="right"><a href="#" class="read-more">Read more</a></p>
+        <p class="right"><a href="movie.html?id=${
+          result.id
+        }" class="read-more">Read more</a></p>
       </div>
     </div>
     `

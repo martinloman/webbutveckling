@@ -1,6 +1,7 @@
 const API_IMAGE_BASE_PATH = "https://image.tmdb.org/t/p/w154"
 const API_BACKDROP_BASE_PATH = "https://image.tmdb.org/t/p/original"
 
+//Den här eventlyssnaren körs när DOMens innehåll laddats
 document.addEventListener("DOMContentLoaded", async function () {
   console.log("DOMload")
 
@@ -16,8 +17,13 @@ document.addEventListener("DOMContentLoaded", async function () {
   renderMovie(movie)
 })
 
+/*
+  Funktionen renderMovie ansvarar för att skriva ut information
+  om filmen i sidan.
+ */
 function renderMovie(movie) {
   document.title = "Movie: " + movie.title
+  let title = document.getElementById("title")
   title.innerText = movie.title
 
   // Sätter bakgrundsbild (från APIet) på heron

@@ -115,7 +115,6 @@ a.read-more {
 footer {
   height: 20vh;
 }
-
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 2em;
